@@ -3,14 +3,14 @@ import datetime
 
 columns = shutil.get_terminal_size().columns
 name = input("Enter your name :").title()
-print("*" * 145)
+print("*" * columns)
 print("WELCOME TO SOON FATT".center(columns))
 print("Mig 22 A , Sonagiri  Bhopal, 462022 ".center(columns))
 print("Contacts: 9876543210 07642-250815".center(columns))
 print("Email-SOONFATTservices@gmail.com".center(columns))
 print("Date:", datetime.date(2022, 9, 21))
 print("Customer Name:", name)
-print("*" * 145)
+print("*" * columns)
 total = 0
 description = []
 
@@ -38,12 +38,12 @@ def calc(cat, no, quant):
 
 # Table
 table = {'2': 10, '4': 12, '6': 8}
-print("-" * 10, "Table Description", "-" * 10)
+print("-" * ((columns//2)-11), " Table  Description ", "-" * ((columns//2)-11))
 print("2 person")
 print("4 person")
 print("6 person")
 tb = input("Choose Table : ")
-print("-" * 145)
+print("-" * columns)
 if tb not in table:
     print("Invalid value entered ! \n Try Again and Enter 2,4 or 6.")
 else:
@@ -162,7 +162,7 @@ else:
                 else:
                     quant = int(input("Enter Quantity:"))
                     calc(7, taken, quant)
-                    more = input("Do you want anything else?\nEnter 'y' if yes :").upper()
+                    more = input("Do you want anything else?\nEnter 'y' if yes , Press any key for No :").upper()
             elif cat == 'D':
                 print("Chinese ")
                 print("1.Manchurian\t120/-")
@@ -183,19 +183,20 @@ else:
                 print("Invalid Value Entered !!")
                 more = 'N'
 
-    print("-" * 145)
-    print("*" * 145)
+    print("-" * columns)
+    print("*" * columns)
     print("WELCOME TO SOON FATT".center(columns))
     print("Mig 22 A , Sonagiri  Bhopal, 462022 ".center(columns))
     print("Contacts: 9876543210 07642-250815".center(columns))
     print("Email-SOONFATTservices@gmail.com".center(columns))
     print("Date:", datetime.date(2022, 9, 21))
     print("Customer Name:", name)
-    print("-" * 145)
+    print("-" * columns)
     print(" " * 10, "ORDER SUMMARY", " " * 10)
     for i in description:
         print(i[0],"\t",i[1],"\t",i[2],"\t",i[3],"/-")
     print("\t\t\t\tTotal:", total,"/-")
-    print("\n\n","*" * 144,"\n")
+    print("\n\n")
+    print("*" *columns,"\n")
     print("THANKYOU VISIT AGAIN".center(columns),"\n")
-    print("*" * 145)
+    print("*" * columns)
